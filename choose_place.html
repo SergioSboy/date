@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор развлечения</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Выбери, чем бы ты хотела заняться</h1>
+    <div class="tiles">
+        <a href="mathilde.html" class="tile">
+            <div class="tile-content">
+                <h2>Кафе Mathilde</h2>
+            </div>
+        </a>
+        <a href="tir.html" class="tile">
+            <div class="tile-content">
+                <h2>Тир "Стальной Дух"</h2>
+            </div>
+        </a>
+        <a href="park.html" class="tile">
+            <div class="tile-content">
+                <h2>Прогулка по парку</h2>
+            </div>
+        </a>
+        <a href="pottery.html" class="tile">
+            <div class="tile-content">
+                <h2>Гончарная мастерская "ClayArt"</h2>
+            </div>
+        </a>
+        <a href="cooking.html" class="tile">
+            <div class="tile-content">
+                <h2>Кулинарное занятие "Гурман"</h2>
+            </div>
+        </a>
+        <a href="museum.html" class="tile">
+            <div class="tile-content">
+                <h2>Посещение музея "История"</h2>
+            </div>
+        </a>
+        <a href="cinema.html" class="tile">
+            <div class="tile-content">
+                <h2>Вечер в кино "CineStar"</h2>
+            </div>
+        </a>
+        <div class="tile" onclick="selectPlace('Концерт или шоу')">
+            <div class="tile-content">
+                <h2>Концерт или шоу</h2>
+            </div>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для обработки выбора -->
+<script>
+    function selectPlace(place) {
+        alert(`Отличный выбор! Я с нетерпением жду нашего свидания в "${place}".`);
+        // Здесь можно добавить дополнительный функционал, например, отправку выбора на сервер или переход на подтверждающую страницу
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гончарная мастерская "ClayArt"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Гончарная мастерская "ClayArt"</h1>
+
+    <!-- Описание Мастерской -->
+    <div class="pottery-description">
+        <p>Добро пожаловать в <strong>Гончарную мастерскую "ClayArt"</strong>! Здесь вы можете окунуться в мир творчества и ремесла, создавая уникальные изделия из глины под руководством опытных мастеров. Независимо от вашего уровня навыков, мы предлагаем комфортную и вдохновляющую среду для всех.</p>
+        <h2>Расположение</h2>
+        <p>Наша мастерская находится в центре города, в уютном районе с развитой инфраструктурой. Удобная транспортная доступность и наличие парковочных мест обеспечивают легкий доступ для всех посетителей.</p>
+    </div>
+
+    <!-- Кнопка "Хочу сюда" -->
+    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для Кнопок -->
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function goToConfirmation() {
+        // Сохранение выбранного места в локальное хранилище
+        localStorage.setItem('chosenPlace', 'Гончарная мастерская "ClayArt"');
+        // Переход на страницу подтверждения
+        window.location.href = 'confirmation.html';
+    }
+</script>
+</body>
+</html>

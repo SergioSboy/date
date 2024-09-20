@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафе Mathilde</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Кафе Mathilde</h1>
+
+    <!-- Описание Кафе -->
+    <div class="cafe-description">
+        <p>Добро пожаловать в <strong>Кафе Mathilde</strong>! Наше кафе предлагает вам насладиться изысканным кофе, свежими выпечками и уютной атмосферой. Мы стремимся создать для вас комфортное пространство для общения и отдыха.</p>
+        <h2>Расположение</h2>
+        <p>Наше кафе расположено на уютной улочке в центре города, рядом с парком и музеями. Удобная парковка и близость к основным достопримечательностям делают нас идеальным местом для встречи.</p>
+    </div>
+
+    <!-- Кнопка "Хочу сюда" -->
+    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для Кнопки "Хочу сюда" -->
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function goToConfirmation() {
+        // Сохранение выбранного места в локальное хранилище
+        localStorage.setItem('chosenPlace', 'Кафе Mathilde');
+        // Переход на страницу подтверждения
+        window.location.href = 'confirmation.html';
+    }
+</script>
+</body>
+</html>

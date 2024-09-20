@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кулинарное занятие "Гурман"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Кулинарное занятие "Гурман"</h1>
+
+    <!-- Описание Кулинарного Занятия -->
+    <div class="cooking-description">
+        <p>Добро пожаловать на <strong>Кулинарное занятие "Гурман"</strong>! Проведите время вместе, создавая вкусные блюда под руководством опытного шеф-повара. Это отличная возможность не только научиться готовить новые рецепты, но и насладиться совместным творчеством и общением.</p>
+
+        <h2>Услуги</h2>
+        <h2>Расположение</h2>
+        <p>Наш кулинарный центр "Гурман" расположен в центре города, в уютной и современной студии с полностью оборудованной кухней. Удобный доступ на общественном транспорте и наличие парковочных мест обеспечивают комфортное посещение.</p>
+    </div>
+
+    <!-- Кнопка "Хочу сюда" -->
+    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для Кнопок -->
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function goToConfirmation() {
+        // Сохранение выбранного места в локальное хранилище
+        localStorage.setItem('chosenPlace', 'Кулинарное занятие "Гурман"');
+        // Переход на страницу подтверждения
+        window.location.href = 'confirmation.html';
+    }
+</script>
+</body>
+</html>

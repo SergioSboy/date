@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогулка по парку</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Прогулка по парку</h1>
+
+    <!-- Описание Прогулки по Парку -->
+    <div class="park-description">
+        <p>Добро пожаловать на <strong>Прогулку по парку</strong>! Проведите время на свежем воздухе, наслаждаясь природой, красивыми пейзажами и спокойной атмосферой. Это идеальное место для романтической встречи, пикника или просто расслабляющей прогулки.</p>
+        <h2>Расположение</h2>
+        <p>Наш парк расположен в живописном районе города, с удобным доступом на общественном транспорте и наличием бесплатной парковки для посетителей. Зеленые насаждения, ухоженные аллеи и разнообразные зоны отдыха делают наш парк идеальным местом для вашего отдыха.</p>
+    </div>
+
+    <!-- Кнопка "Хочу сюда" -->
+    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для Кнопок -->
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function goToConfirmation() {
+        // Сохранение выбранного места в локальное хранилище
+        localStorage.setItem('chosenPlace', 'Прогулка по парку');
+        // Переход на страницу подтверждения
+        window.location.href = 'confirmation.html';
+    }
+</script>
+</body>
+</html>

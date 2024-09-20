@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вечер в кино "CineStar"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Вечер в кино "CineStar"</h1>
+
+    <!-- Описание Кинотеатра -->
+    <div class="cinema-description">
+        <p>Добро пожаловать в <strong>Кинотеатр "CineStar"</strong>! Насладитесь просмотром новейших фильмов в комфортной обстановке с современными технологиями звука и изображения. Наш кинотеатр предлагает широкий выбор фильмов для любого вкуса — от блокбастеров до независимых лент.</p>
+        <h2>Расположение</h2>
+        <p>Наш кинотеатр расположен в центре города, рядом с торговыми центрами и ресторанами. Удобный доступ на общественном транспорте и наличие парковочных мест делают посещение "CineStar" легким и приятным.</p>
+    </div>
+
+    <!-- Кнопка "Хочу сюда" -->
+    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для Кнопок -->
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function goToConfirmation() {
+        // Сохранение выбранного места в локальное хранилище
+        localStorage.setItem('chosenPlace', 'Вечер в кино "CineStar"');
+        // Переход на страницу подтверждения
+        window.location.href = 'confirmation.html';
+    }
+</script>
+</body>
+</html>

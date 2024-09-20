@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посещение музея "История"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Посещение музея "История"</h1>
+
+    <!-- Описание Музея -->
+    <div class="museum-description">
+        <p>Добро пожаловать в <strong>Музей "История"</strong>! Погрузитесь в богатую историю нашего региона, исследуйте уникальные экспонаты и наслаждайтесь образовательными программами. Музей предлагает разнообразные выставки, интерактивные зоны и уютные места для отдыха.</p>
+
+        <h2>Экспозиции</h2>
+        <h2>Расположение</h2>
+        <p>Наш музей расположен в центре города, рядом с парком и другими достопримечательностями. Удобный доступ на общественном транспорте и наличие парковочных мест обеспечивают комфортное посещение для всех гостей.</p>
+    </div>
+
+    <!-- Кнопка "Хочу сюда" -->
+    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для Кнопок -->
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function goToConfirmation() {
+        // Сохранение выбранного места в локальное хранилище
+        localStorage.setItem('chosenPlace', 'Посещение музея "История"');
+        // Переход на страницу подтверждения
+        window.location.href = 'confirmation.html';
+    }
+</script>
+</body>
+</html>

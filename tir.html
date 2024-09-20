@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тир "Стальной Дух"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Тир "Стальной Дух"</h1>
+
+    <!-- Описание Тира -->
+    <div class="tir-description">
+        <p>Добро пожаловать в <strong>Тир "Стальной Дух"</strong>! Здесь вы можете испытать свои навыки стрельбы с использованием настоящего боевого оружия под контролем опытных инструкторов. Наш тир предлагает безопасную и профессиональную среду для любителей стрельбы и тех, кто хочет попробовать что-то новое.</p>
+
+        <h2>Расположение</h2>
+        <p>Наш тир находится в пригороде, в удобной доступности от центра города. Удобная парковка и хорошо освещенная территория обеспечивают комфортное посещение в любое время суток.</p>
+    </div>
+
+    <!-- Кнопка "Хочу сюда" -->
+    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+
+    <button class="back-button" onclick="goBack()">← Назад</button>
+</div>
+
+<!-- Скрипт для Кнопок -->
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    function goToConfirmation() {
+        // Сохранение выбранного места в локальное хранилище
+        localStorage.setItem('chosenPlace', 'Тир "Стальной Дух"');
+        // Переход на страницу подтверждения
+        window.location.href = 'confirmation.html';
+    }
+</script>
+</body>
+</html>
