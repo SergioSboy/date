@@ -18,7 +18,7 @@
     </div>
 
     <!-- Кнопка "Хочу сюда" -->
-    <button class="action-button" onclick="goToConfirmation()">Хочу сюда</button>
+    <button class="action-button" onclick="goChooseDate()">Хочу сюда</button>
 
     <button class="back-button" onclick="goBack()">← Назад</button>
 </div>
@@ -29,11 +29,11 @@
         window.history.back();
     }
 
-    function goToConfirmation() {
+    function goChooseDate() {
         // Сохранение выбранного места в локальное хранилище
-        localStorage.setItem('chosenPlace', 'Прогулка по парку');
+        localStorage.setItem('chosenPlace', 'Вечер в кино "CineStar"');
         // Переход на страницу подтверждения
-        window.location.href = 'confirmation.html';
+        window.location.href = 'choose_date.html';
     }
 </script>
 </body>
