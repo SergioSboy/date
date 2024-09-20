@@ -416,7 +416,7 @@ h1 {
     }
 
     .days {
-        grid-template-columns: repeat(3, 1fr); /* 3 колонки на смартфоне */
+        grid-template-columns: repeat(7, 1fr); /* 3 колонки на смартфоне */
     }
 
     .day {
