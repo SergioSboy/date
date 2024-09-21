@@ -1,0 +1,121 @@
+/* choose_place.css */
+
+/* Стили для страницы выбора развлечений */
+.choose-place-page .container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 900px;
+    width: 90%;
+}
+
+.choose-place-page h1 {
+    color: #FF69B4;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.choose-place-page .tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.choose-place-page .tile {
+    background: #FFF0F5;
+    border: 2px solid #FFB6C1;
+    border-radius: 10px;
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Убираем подчеркивание для ссылок */
+}
+
+.choose-place-page .tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    background-color: #FFE4E1;
+}
+
+.choose-place-page .tile-content h2 {
+    color: #FF1493;
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Стили для кнопки "Назад" */
+.choose-place-page .back-button {
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.choose-place-page .back-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Медиа-запросы для планшетов */
+@media (max-width: 768px) {
+    .choose-place-page .container {
+        padding: 30px;
+    }
+
+    .choose-place-page h1 {
+        font-size: 2em;
+    }
+
+    .choose-place-page .tile {
+        width: 45%;
+        height: 130px;
+    }
+
+    .choose-place-page .back-button {
+        padding: 12px 25px;
+        font-size: 0.95em;
+    }
+}
+
+/* Медиа-запросы для смартфонов */
+@media (max-width: 480px) {
+    .choose-place-page .container {
+        padding: 20px;
+    }
+
+    .choose-place-page h1 {
+        font-size: 1.8em;
+    }
+
+    .choose-place-page .tiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choose-place-page .tile {
+        width: 80%;
+        height: 120px;
+    }
+
+    .choose-place-page .back-button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1em;
+        border-radius: 30px;
+    }
+}
