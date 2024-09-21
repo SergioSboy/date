@@ -45,22 +45,11 @@
                 <h2>Вечер в кино "CineStar"</h2>
             </div>
         </a>
-        <div class="tile" onclick="selectPlace('Концерт или шоу')">
-            <div class="tile-content">
-                <h2>Концерт или шоу</h2>
-            </div>
-        </div>
     </div>
     <button class="back-button" onclick="goBack()">← Назад</button>
 </div>
 
-<!-- Скрипт для обработки выбора -->
 <script>
-    function selectPlace(place) {
-        alert(`Отличный выбор! Я с нетерпением жду нашего свидания в "${place}".`);
-        // Здесь можно добавить дополнительный функционал, например, отправку выбора на сервер или переход на подтверждающую страницу
-    }
-
     function goBack() {
         window.history.back();
     }

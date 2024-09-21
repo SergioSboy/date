@@ -22,12 +22,14 @@ body {
     width: 90%;
 }
 
+/* Заголовок страницы */
 .choose-place-page h1 {
-    color: #FF69B4;
+    color: #A64E6C;
     font-size: 2.5em;
     margin-bottom: 30px;
 }
 
+/* Плитки выбора развлечений */
 .choose-place-page .tiles {
     display: flex;
     flex-wrap: wrap;
@@ -38,7 +40,7 @@ body {
 
 .choose-place-page .tile {
     background: #FFF0F5;
-    border: 2px solid #FFB6C1;
+    border: 2px solid #FFF7FA;
     border-radius: 10px;
     width: 250px;
     height: 150px;
@@ -58,7 +60,7 @@ body {
 }
 
 .choose-place-page .tile-content h2 {
-    color: #FF1493;
+    color: #A64E6C;
     margin: 0;
     font-size: 1.2em;
     text-align: center;
@@ -66,19 +68,20 @@ body {
 
 /* Стили для кнопки "Назад" */
 .choose-place-page .back-button {
-    background-color: #555;
+    background-color: #003f3b;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-align: center;
-    font-size: 0.9em;
-    border-radius: 30px;
+    font-size: 1em;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
 }
 
 .choose-place-page .back-button:hover {
-    background-color: #333;
+    background-color: #45a049;
     transform: scale(1.05);
 }
 
@@ -98,7 +101,7 @@ body {
     }
 
     .choose-place-page .back-button {
-        padding: 12px 25px;
+        padding: 10px 20px;
         font-size: 0.95em;
     }
 }
@@ -125,7 +128,7 @@ body {
 
     .choose-place-page .back-button {
         width: 100%;
-        padding: 12px 0;
+        padding: 10px 0;
         font-size: 1em;
         border-radius: 30px;
     }

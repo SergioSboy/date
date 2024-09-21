@@ -174,10 +174,15 @@ body {
 
     .carousel {
         max-width: 400px;
+        height: 250px;
     }
 
     .carousel-button {
         padding: 6px;
         font-size: 1em;
+    }
+
+    .carousel-item img {
+        height: 320px; /* Измените высоту для смартфонов */
     }
 }
