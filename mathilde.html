@@ -13,8 +13,24 @@
     <!-- Описание Кафе -->
     <div class="cafe-description">
         <p>Добро пожаловать в <strong>Кафе Mathilde</strong>! Наше кафе предлагает вам насладиться изысканным кофе, свежими выпечками и уютной атмосферой. Мы стремимся создать для вас комфортное пространство для общения и отдыха.</p>
-        <h2>Расположение</h2>
-        <p>Наше кафе расположено на уютной улочке в центре города, рядом с парком и музеями. Удобная парковка и близость к основным достопримечательностям делают нас идеальным местом для встречи.</p>
+    </div>
+
+    <!-- Карусель с изображениями -->
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://media.istockphoto.com/id/1428594094/photo/empty-coffee-shop-interior-with-wooden-tables-coffee-maker-pastries-and-pendant-lights.jpg?s=612x612&w=0&k=20&c=dMqeYCJDs3BeBP_jv93qHRISDt-54895SPoVc6_oJt4=" alt="Интерьер Кафе Mathilde">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?cs=srgb&dl=pexels-igor-starkov-233202-1307698.jpg&fm=jpg" alt="Вкусные блюда в Кафе Mathilde">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5OAClasKwqprnwAgFy9ZB1wEcAju5t5yo2A&s" alt="Уютная обстановка Кафе Mathilde">
+            </div>
+        </div>
+        <!-- Кнопки навигации -->
+        <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
     </div>
 
     <!-- Кнопка "Хочу сюда" -->
@@ -23,18 +39,43 @@
     <button class="back-button" onclick="goBack()">← Назад</button>
 </div>
 
-<!-- Скрипт для Кнопок -->
+<!-- Скрипт для Кнопок и Карусели -->
 <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
     function goBack() {
         window.history.back();
     }
 
     function goChooseDate() {
         // Сохранение выбранного места в локальное хранилище
-        localStorage.setItem('chosenPlace', 'Вечер в кино "CineStar"');
+        localStorage.setItem('chosenPlace', 'Кафе Mathilde');
         // Переход на страницу подтверждения
         window.location.href = 'choose_date.html';
     }
+
+    // Автоматическая прокрутка слайдов каждые 5 секунд
 </script>
 </body>
 </html>

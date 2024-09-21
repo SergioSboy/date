@@ -1,5 +1,16 @@
 /* choose_place.css */
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Стили для страницы выбора развлечений */
 .choose-place-page .container {
     background: rgba(255, 255, 255, 0.95);

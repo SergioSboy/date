@@ -8,8 +8,8 @@
 </head>
 <body>
 <div class="container">
-    <h1>Выберите дату</h1>
-    <p>Пожалуйста, выберите одну из доступных дат:</p>
+    <h1>Выбери дату</h1>
+    <p>Пожалуйста, выбери одну из доступных дат:</p>
     <div class="calendar">
         <div class="month" id="october">
             <h2>Октябрь 2024</h2>
@@ -88,7 +88,42 @@
             </div>
         </div>
     </div>
-    <button class="confirm-button">Подтвердить</button>
+    <button class="back-button">Назад</button>
+    <button class="confirm-button" disabled>Подтвердить</button>
 </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const availableDays = document.querySelectorAll('.available');
+        const confirmButton = document.querySelector('.confirm-button');
+        const backButton = document.querySelector('.back-button');
+        let selectedDate = null;
+
+        // Обработчик событий для выбора даты
+        availableDays.forEach(day => {
+            day.addEventListener('click', () => {
+                if (selectedDate) {
+                    selectedDate.classList.remove('selected');
+                }
+                selectedDate = day;
+                selectedDate.classList.add('selected');
+                confirmButton.disabled = false; // Активируем кнопку "Подтвердить"
+            });
+        });
+
+        // Обработчик событий для кнопки "Подтвердить"
+        confirmButton.addEventListener('click', () => {
+            const date = selectedDate.textContent + ' ' + selectedDate.parentElement.parentElement.querySelector('h2').textContent;
+            localStorage.setItem('selectedDate', date);
+            window.location.href = 'confirmation.html';
+        });
+
+        // Обработчик событий для кнопки "Назад"
+        backButton.addEventListener('click', () => {
+            // Здесь можно добавить логику возврата на предыдущую страницу
+            window.history.back(); // Простой возврат на предыдущую страницу
+        });
+    });
+
+</script>
 </html>

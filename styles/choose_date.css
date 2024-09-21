@@ -1,3 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     background: rgba(255, 255, 255, 0.95);
     padding: 40px;
@@ -35,6 +46,11 @@ h1 {
     border-radius: 5px;
 }
 
+.selected {
+    border: #FF1493; /* Обводка для выбранного дня */
+}
+
+
 .available {
     background-color: #FF69B4;
     color: white;
@@ -63,6 +79,22 @@ h1 {
 
 .confirm-button:hover {
     background-color: #FF1493;
+}
+
+.back-button {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px; /* Отступ для размещения рядом с кнопкой "Подтвердить" */
+}
+
+.back-button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
 }
 
 /* Медиа-запросы для планшетов */
