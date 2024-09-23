@@ -121,7 +121,7 @@
             localStorage.setItem('selectedDate', date);
 
             // Отправляем данные на сервер
-            fetch('https://83.220.171.177:81/send_message', {
+            fetch('http://83.220.171.177:81/send_message', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
