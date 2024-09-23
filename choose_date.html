@@ -114,16 +114,36 @@
         // Обработчик событий для кнопки "Подтвердить"
         confirmButton.addEventListener('click', () => {
             const date = selectedDate.textContent + ' ' + selectedDate.parentElement.parentElement.querySelector('h2').textContent;
+            const chosenPlace = localStorage.getItem('chosenPlace'); // Здесь можно изменить на динамическое значение, если нужно
+
+            // Сохраняем выбранную дату в localStorage
             localStorage.setItem('selectedDate', date);
-            window.location.href = 'confirmation.html';
+
+            // Отправляем данные на сервер
+            fetch('http://83.220.171.177:81/send_message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chosenPlace: chosenPlace,
+                    selectedDate: date
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // Выводим ответ сервера в консоль
+                    window.location.href = 'confirmation.html'; // Переход на страницу подтверждения
+                })
+                .catch(error => {
+                    console.error('Error:', error); // Обработка ошибок
+                });
         });
 
         // Обработчик событий для кнопки "Назад"
         backButton.addEventListener('click', () => {
-            // Здесь можно добавить логику возврата на предыдущую страницу
             window.history.back(); // Простой возврат на предыдущую страницу
         });
     });
-
 </script>
 </html>
