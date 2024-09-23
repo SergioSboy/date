@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Выбор даты и времени</title>
     <link rel="stylesheet" href="styles/choose_date.css">
 </head>
@@ -120,7 +121,7 @@
             localStorage.setItem('selectedDate', date);
 
             // Отправляем данные на сервер
-            fetch('http://83.220.171.177:81/send_message', {
+            fetch('https://83.220.171.177:81/send_message', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
